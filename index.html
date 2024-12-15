@@ -62,14 +62,33 @@
         }
         .content {
             display: none;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.3);
-            width: 1200px;
-            padding: 80px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            color: #221717;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3);
+    width: 90%; /* Ancho relativo */
+    max-width: 1200px; /* Limitar el ancho máximo */
+    padding: 20px; /* Reducir padding para pantallas pequeñas */
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #221717;
+    margin: 20px auto; /* Centrar con margen automático */
+    word-wrap: break-word; /* Para ajustar texto largo */
+    line-height: 1.5; /* Mejorar legibilidad */
         }
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .content {
+        padding: 15px; /* Reducir padding en pantallas medianas */
+        font-size: 16px; /* Ajustar tamaño de fuente */
+    }
+}
+
+@media (max-width: 576px) {
+    .content {
+        padding: 10px; /* Reducir padding en pantallas pequeñas */
+        font-size: 14px; /* Aún más pequeño para pantallas pequeñas */
+    }
+}
         .decorative-image {
             position: absolute;
             width: 100px;
