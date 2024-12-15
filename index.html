@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️ Día -1 ❤️</title>
+    <!-- Integración de Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #fff;
+            position: relative;
+        }
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('img/mg1.jpeg') no-repeat center center;
+            background-size: cover;
+            z-index: -1; /* Pone la imagen de fondo detrás del contenido */
+        }
+        #formulario {
+            text-align: center;
+            background: rgba(19, 14, 14, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1; /* Asegura que el formulario esté encima del fondo */
+        }
+        h1 {
+            margin-bottom: 15px;
+        }
+        input {
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #ff6f91;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff3d68;
+        }
+        .content {
+            display: none;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.3);
+            width: 1200px;
+            padding: 80px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: #221717;
+        }
+        .decorative-image {
+            position: absolute;
+            width: 100px;
+            height: auto;
+        }
+        .image-top-left {
+            top: -50px;
+            left: -50px;
+        }
+        .image-top-right {
+            top: -50px;
+            right: -50px;
+        }
+        .image-bottom-left {
+            bottom: -50px;
+            left: -50px;
+        }
+        #justy{
+        text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image"></div> <!-- Fondo de la imagen 4 -->
+
+    <div id="formulario">
+        
+        <h1>Adivinanza</h1>
+        <h6>❤️ Bueno Morenita mia, En una película llena de héroes valientes, uno de ellos expresó su amor de una manera especial. ¿Qué frase dijo para mostrar su cariño, usando un número como referencia?❤️</h6>
+        <h6>letras minuscula y pegado como se muestra debajo</h6>
+        <input type="password" id="clave" placeholder="Escribeturespuesta">
+        <button onclick="verificarClave()">Ingresar</button>
+        <!-- Contenedor para la alerta -->
+        <div id="alerta" class="alert alert-danger mt-3" style="display: none;" role="alert">
+            ❤️ Clave incorrecta negrita ❤️. Inténtalo nuevamente o comunícate con tu novio; él te dará un par de pistas.
+        </div>
+    </div>
+
+    <div id="contenido" class="content">
+        <h1>❤️ ¡Bienvenida al día -1 Mi amor! ❤️</h1>
+        <p id="justy">Negrita hoy día -1 quiero decirte cosas que nunca te dije</p>
+        <p id="justy">
+             <strong> Eres la mujer con quien encuentro paz</strong> Cada momento a tu lado es un refugio, 
+             un lugar donde todo se calma y el ruido del mundo se desvanece. 
+             Tu amor me ha dado la tranquilidad que siempre busqué, esa sensación de estar en casa, de estar completo. 
+             <strong>Tu amor me ha hecho una mejor persona</strong> Cada día contigo es una oportunidad para crecer, para aprender 
+             a ser más paciente, más amable y más auténtico. 
+            
+            <strong>Cada vez que te miro, me doy cuenta de lo afortunado que soy de tenerte</strong>
+            En tus ojos encuentro mi razón para sonreír, en tu voz la calma que necesito 
+            en ese instante me doy cuenta de que no hay nada más importante que este amor que compartimos.
+            
+            <strong>Me encanta cómo me haces sentir</strong> amado, aceptado y entendido. Eres mi apoyo, mi confidente,
+             la persona que me comprende sin palabras. Solo tú sabes cómo calmar mis miedos, cómo alentar mis sueños,
+              y cómo amarme de una manera que me hace sentir único. Tu amor me da fuerzas y me inspira a ser 
+              lo mejor de mí mismo.</p>
+<p>❤️TE AMO desde el dìa 1❤️ y te sigo amando hoy el dia -1❤️.</p>
+            ❤️🎁 DÌA -1 🎁❤️
+
+            <p>❤️FELIZ DÌA MI AMOR❤️</p>
+    </div>
+
+    <!-- Integración de jQuery y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function verificarClave() {
+            const clave = document.getElementById("clave").value;
+            const contenido = document.getElementById("contenido");
+            const alerta = document.getElementById("alerta");
+
+            if (clave === "teamo3millones") {
+                contenido.style.display = "block";
+                document.getElementById("formulario").style.display = "none";
+            } else {
+                alerta.style.display = "block";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const inputClave = document.getElementById("clave");
+            inputClave.addEventListener("keypress", (event) => {
+                if (event.key === "Enter") {
+                    verificarClave();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
